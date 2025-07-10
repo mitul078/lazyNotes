@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  font-family: "outfit";
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.container .head {
+  font-size: 3rem;
+  color: white;
+  padding-bottom: 2rem;
+}
+.container .notes-container {
+  width: 100%;
+  height: calc(100% - 5.5rem);
+  display: flex;
+}
+.container .notes-container .display-notes {
+  width: 70%;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+.container .notes-container .display-notes span {
+  color: lightskyblue;
+  font-size: 2rem;
+  margin-top: 3rem;
+  background-color: rgba(255, 255, 255, 0.126);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.container .notes-container .display-notes .box {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1em;
+}
+.container .notes-container .display-notes .box .title {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .notes-container .display-notes .box .title i {
+  font-size: 1.2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+.container .notes-container .display-notes .box .title i:hover {
+  animation: swing 0.6s ease;
+  color: chocolate;
+  font-size: 1.5rem;
+}
+.container .notes-container .display-notes .box .title h1 {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+}
+.container .notes-container .display-notes .box .content {
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.container .notes-container .display-notes .box .content::-webkit-scrollbar {
+  width: 8px;
+}
+.container .notes-container .display-notes .box .content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.465);
+  border-radius: 1em;
+}
+.container .notes-container .display-notes .box .content::-webkit-scrollbar-thumb {
+  background: rgba(211, 211, 211, 0.719);
+  scroll-behavior: smooth;
+  border-radius: 3em;
+}
+.container .notes-container .display-notes .box .content p {
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+  width: 80%;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+.container .notes-container .display-notes::-webkit-scrollbar {
+  display: none;
+}
+.container .notes-container .make-notes {
+  width: 30%;
+  height: 100%;
+  color: black;
+  padding: 1rem;
+}
+.container .notes-container .make-notes .add {
+  cursor: pointer;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.container .notes-container .make-notes .form-data {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container .notes-container .make-notes .form-data .addTitle input {
+  color: white;
+  width: 100%;
+  outline: none;
+  height: 3rem;
+  padding-left: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.125);
+}
+.container .notes-container .make-notes .form-data .addContent textarea {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.125);
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  max-height: 300px;
+  width: 100%;
+  height: 10rem;
+  resize: vertical;
+}
+.container .notes-container .make-notes .form-data button {
+  background-color: lightskyblue;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}/*# sourceMappingURL=style.css.map */
